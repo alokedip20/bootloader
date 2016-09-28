@@ -11,7 +11,7 @@ start :
 ;******************************** print the custom messege stored in the si register*******************************	
 .loop	lodsb
 	cmp al,0
-	je input
+	je input		; JUMP IF EQUAL
 	int 0x10 
 	jmp .loop
 ;********************************* WAIT FOR A KEY PRESS **********************************************************
@@ -67,7 +67,7 @@ drawimage:
 	stosb      		;stop if there is no string byte to read
 	inc cx			
 	cmp cx,120      	;total width = 120-0 = 120
-	jne drawimage
+	jne drawimage		;JUMP IF NOT EQUAL 
 	mov cx,0		; reset the cx for plotting the next row of pixels
 	inc dx
 	add di,200		;total 200 padding previous line right 100 padding and next line left 100 padding	
