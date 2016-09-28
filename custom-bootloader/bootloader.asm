@@ -39,7 +39,7 @@ palette:
 	mov ax,0x000		; store 0x000 into ax
 	mov es,ax       	;move ax to es
 	mov bx,0x1000		;IN THIS ADDRESS WE COPY THE BIT BY BIT INFORMATION FROM PENGOO IMAGE
-	mov ah,0x2		; we will read 2nd sectors that has been appended at the end of os.img
+	mov ah,0x2		; we will read 2nd sectors that has been appended at the end of myimage.img
 	mov al,39		; we have to read total 39 sectors because sectors = ceil(filesize/512)
 	mov ch,0x0		;low 8 bits of the cylinder no and we will read the lower most track of the hard disk
 	mov cl,0x2		; this is the sector no in this case it is 0x2
