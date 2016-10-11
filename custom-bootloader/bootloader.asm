@@ -7,6 +7,10 @@ start :
 ;*********************************** type my name **************************************************
 	mov si,msg
 	call messege
+	call wait_input
+	call palette
+	call copy
+	call drawimage
 ;******************************** print the custom messege stored in the si register*******************************	
 messege:
 	.loop	
